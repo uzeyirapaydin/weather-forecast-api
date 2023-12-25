@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "f463ea51-eef7-4002-a914-35b48a318657",
+		"name": "Weather Forecast API",
+		"description": "Weather Forecast API Case Study\n\nContact Support:\n Name: Üzeyir Apaydın\n Email: uzeyirapaydin@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1403076"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "forecast",
+					"item": [
+						{
+							"name": "next48h",
+							"item": [
+								{
+									"name": "{city}",
+									"item": [
+										{
+											"name": "Get Weather Forecast By City Name provided in http body",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "(Required) ",
+														"key": "X-API-KEY",
+														"value": "<string>"
+													},
+													{
+														"description": "(Required) ",
+														"key": "X-API-SECRET",
+														"value": "<string>"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/forecast/next48h/:city",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"forecast",
+														"next48h",
+														":city"
+													],
+													"variable": [
+														{
+															"key": "city",
+															"value": "<string>",
+															"description": "(Required) City Name"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Successfully retrieved weather forecasts",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"description": "(Required) ",
+																"key": "X-API-KEY",
+																"value": "<string>"
+															},
+															{
+																"description": "(Required) ",
+																"key": "X-API-SECRET",
+																"value": "<string>"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/forecast/next48h/:city",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"forecast",
+																"next48h",
+																":city"
+															],
+															"variable": [
+																{
+																	"key": "city"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "You are not authorized to view the resource",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"description": "(Required) ",
+																"key": "X-API-KEY",
+																"value": "<string>"
+															},
+															{
+																"description": "(Required) ",
+																"key": "X-API-SECRET",
+																"value": "<string>"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/forecast/next48h/:city",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"forecast",
+																"next48h",
+																":city"
+															],
+															"variable": [
+																{
+																	"key": "city"
+																}
+															]
+														}
+													},
+													"status": "Unauthorized",
+													"code": 401,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "The resource you were trying to reach is not found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"description": "(Required) ",
+																"key": "X-API-KEY",
+																"value": "<string>"
+															},
+															{
+																"description": "(Required) ",
+																"key": "X-API-SECRET",
+																"value": "<string>"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/forecast/next48h/:city",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"forecast",
+																"next48h",
+																":city"
+															],
+															"variable": [
+																{
+																	"key": "city"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "City Name can not be null",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"description": "(Required) ",
+																"key": "X-API-KEY",
+																"value": "<string>"
+															},
+															{
+																"description": "(Required) ",
+																"key": "X-API-SECRET",
+																"value": "<string>"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/forecast/next48h/:city",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"forecast",
+																"next48h",
+																":city"
+															],
+															"variable": [
+																{
+																	"key": "city"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
