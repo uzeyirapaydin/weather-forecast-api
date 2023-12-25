@@ -24,7 +24,7 @@ public class CachingConfig {
     }
 
     @CacheEvict(allEntries = true, value = {FORECAST})
-    @Scheduled(fixedDelay = 2 * 5 * 1000 )
+    @Scheduled(fixedDelay = 60 * 60 * 1000 )
     public void reportCacheEvict() {
         System.out.println("Flush Cache reportCacheEvict");
     }

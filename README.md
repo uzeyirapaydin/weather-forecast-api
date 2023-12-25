@@ -38,7 +38,7 @@ Docker
 
 ## Usage
 
-### Forecast Curl Request Example
+### Weather Forecast Curl Request Example
 
 There is an endpoint(`POST /api/forecast/next48h/Istanbul`) to forecast weather for next 48 hours.
 
